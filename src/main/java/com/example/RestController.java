@@ -58,6 +58,6 @@ public class RestController {
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String welcome() {
 
-     return "Welcome to covid-19-data-centre";
+     return "Welcome to covid-19-data-centre. \n \nVisit Github repo: https://github.com/yudeep-rajbhandari/covid-19-api";
     }
 }
