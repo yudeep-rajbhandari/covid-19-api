@@ -1,6 +1,6 @@
 # Coronavirus stats API
 
-API for covid-19 latest data
+API for covid-19 latest data 
 Scrapping from worldometer.org
 
 For current combine data of all countries:  https://covid-19-apis.herokuapp.com/world
