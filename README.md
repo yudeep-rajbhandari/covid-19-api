@@ -5,8 +5,8 @@ Scrapping from worldometer.org
 
 | URL  | Description |
 | ------------- | ------------- |
-| https://covid-19-apis.herokuapp.com/world  | World stats  |
-| https://covid-19-apis.herokuapp.com/countries | World stats by countries  |
-| https://covid-19-apis.herokuapp.com/ukraine | Ukraine stats |
+| https://covid19-ua.herokuapp.com/world| World stats  |
+| https://covid19-ua.herokuapp.com/countries | World stats by countries  |
+| https://covid19-ua.herokuapp.com/ukraine | Ukraine stats |
 
 
