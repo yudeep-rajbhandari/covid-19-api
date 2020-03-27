@@ -62,7 +62,7 @@ public class RestController {
         }
     }
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    @RequestMapping(value = "/")
     public String welcome() {
 
         return "index";
