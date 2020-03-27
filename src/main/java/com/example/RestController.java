@@ -73,6 +73,6 @@ public class RestController {
     @GetMapping(value = "/test")
     public String test() {
 
-        return "index";
+        return "template1/index";
     }
 }
