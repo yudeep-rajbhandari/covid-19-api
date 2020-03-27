@@ -68,4 +68,9 @@ public class RestController {
 
         return "index";
     }
+    @RequestMapping(value = "/test")
+    public String test() {
+
+        return "index";
+    }
 }
