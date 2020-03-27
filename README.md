@@ -3,10 +3,13 @@
 API for covid-19 latest data 
 Scrapping from worldometer.org
 
-For current combine data of all countries:  https://covid-19-apis.herokuapp.com/world
-For current combine data of all countries:  https://covid-19-apis.herokuapp.com/countries
-For current combine data of all countries:  https://covid-19-apis.herokuapp.com/ukraine
+To see world stats :  https://covid-19-apis.herokuapp.com/world
 
+To see world stats by countries:  https://covid-19-apis.herokuapp.com/countries
+
+To see stats of Ukraine :  https://covid-19-apis.herokuapp.com/ukraine
+
+To see stats of Ukraine for Arduino projects:  https://covid-19-apis.herokuapp.com/arduino
 
 For particular country data: https://covid-19-apis.herokuapp.com/update/country/{country}
  
