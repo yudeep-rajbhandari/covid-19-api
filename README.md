@@ -1,11 +1,12 @@
-# covid-19-api
+# Coronavirus stats API
 
 API for covid-19 latest data
 Scrapping from worldometer.org
 
-For current combine data of all countries:  https://covid-19-apis.herokuapp.com/update/currentTotalcases
-<br>
-For all current data of all country wise:  https://covid-19-apis.herokuapp.com/allUpdate
+For current combine data of all countries:  https://covid-19-apis.herokuapp.com/world
+For current combine data of all countries:  https://covid-19-apis.herokuapp.com/countries
+For current combine data of all countries:  https://covid-19-apis.herokuapp.com/ukraine
+
 
 For particular country data: https://covid-19-apis.herokuapp.com/update/country/{country}
 

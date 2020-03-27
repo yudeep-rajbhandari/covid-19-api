@@ -27,10 +27,9 @@ public class Scrapper {
     List<Elements> list;
 
 
-    public JSONArray getdocument() {
+    public JSONArray getDocument() {
         getRows();
-        JSONArray array = getJSONArray(list, header);
-        return array;
+        return getJSONArray(list, header);
     }
 
     public JSONObject getdocumentbyCountry(String country) {
@@ -54,7 +53,6 @@ public class Scrapper {
 
     private JSONArray getJSONArray(List<Elements> list, List header) {
         JSONArray array = new JSONArray();
-        ArrayList<String> lim = new ArrayList();
         if (list != null) {
             for (Elements li : list) {
                 if (li.size() != 0) {
@@ -91,10 +89,9 @@ public class Scrapper {
     }
 
 
-    public JSONObject getTotalcases() {
+    public JSONObject worldStats() {
         getRows();
-        JSONObject array = getlastJSONObject(list, header);
-        return array;
+        return getlastJSONObject(list, header);
     }
 
     private JSONObject getlastJSONObject(List<Elements> list, List header) {
