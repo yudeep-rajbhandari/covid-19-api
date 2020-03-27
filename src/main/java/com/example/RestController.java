@@ -14,18 +14,6 @@ public class RestController {
     @Autowired
     private Scrapper scrapper;
 
-    @RequestMapping(value = "/arduino", method = RequestMethod.GET)
-    @ResponseBody
-    public String arduino() {
-
-        JSONArray array = scrapper.getDocument();
-        if (array != null) {
-            return array.toString();
-        } else {
-            return new JSONArray().toString();
-        }
-    }
-
     @RequestMapping(value = "/ukraine", method = RequestMethod.GET)
     @ResponseBody
     public String ukraine() {
@@ -77,6 +65,6 @@ public class RestController {
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String welcome() {
 
-        return "Welcome to covid-19-data-centre. \n \nVisit Github repo: https://github.com/yudeep-rajbhandari/covid-19-api";
+        return "index";
     }
 }
