@@ -9,7 +9,7 @@ For current combine data of all countries:  https://covid-19-apis.herokuapp.com/
 
 
 For particular country data: https://covid-19-apis.herokuapp.com/update/country/{country}
-
+ 
 List of countries:
 0 = "China"
 1 = "Italy"
