@@ -1,14 +1,12 @@
 package com.example;
 
+import com.example.scrap.NepalCrawler;
 import com.example.scrap.Scrapper;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 @org.springframework.web.bind.annotation.RestController
 public class RestController {
@@ -31,9 +29,24 @@ public class RestController {
 
     @RequestMapping(value = "/update/country/{country}", method = RequestMethod.GET)
     @ResponseBody
+    @CrossOrigin(origins = "http://localhost:4200")
     public String updatebyCountry(@PathVariable("country") final String country) {
 
         JSONObject array = scrapper.getdocumentbyCountry(country);
+        if(array != null){
+            return  array.toString();
+        }
+        else{
+            return new JSONArray().toString();
+        }
+    }
+
+    @RequestMapping(value = "/update/SAARC", method = RequestMethod.GET)
+    @ResponseBody
+    @CrossOrigin(origins = "http://localhost:4200")
+    public String updatebySAARCCountry() {
+
+        JSONArray array = scrapper.getdocumentbySAARC();
         if(array != null){
             return  array.toString();
         }
@@ -47,6 +60,26 @@ public class RestController {
     public String totalupdate() {
 
         JSONObject array = scrapper.getTotalcases();
+        if(array != null){
+            return  array.toString();
+        }
+        else{
+            return new JSONArray().toString();
+        }
+    }
+
+    @RequestMapping(value = "/update/Nepal", method = RequestMethod.GET)
+    @ResponseBody
+    @CrossOrigin(origins = "http://localhost:4200")
+    public String updateNepal() {
+
+        JSONObject array = null;
+        try {
+            array = new NepalCrawler().call();
+            System.out.println(array);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         if(array != null){
             return  array.toString();
         }
