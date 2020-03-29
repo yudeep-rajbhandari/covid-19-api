@@ -1,5 +1,11 @@
 # covid-19-api
 
+Support for Nepal and SAARC countries data:
+https://covid-19-apis.herokuapp.com/update/SAARC
+<br>
+https://covid-19-apis.herokuapp.com/update/Nepal
+
+
 API for covid-19 latest data
 Scrapping from worldometer.org
 
@@ -8,6 +14,8 @@ For current combine data of all countries:  https://covid-19-apis.herokuapp.com/
 For all current data of all country wise:  https://covid-19-apis.herokuapp.com/allUpdate
 
 For particular country data: https://covid-19-apis.herokuapp.com/update/country/{country}
+
+
 
 List of countries:
 0 = "China"
