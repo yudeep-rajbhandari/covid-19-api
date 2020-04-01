@@ -1,6 +1,6 @@
 package com.example;
 
-import com.example.scrap.Scrapper;
+import com.example.scrap.ScrapperImpl;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,30 +14,18 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class RestController {
 
     @Autowired
-    private Scrapper scrapper;
+    private ScrapperImpl scrapper;
 
     @RequestMapping(value = "/ukraine", method = RequestMethod.GET)
     @ResponseBody
     public String ukraine() {
-
-        JSONArray array = scrapper.getDocument();
-        if (array != null) {
-            return array.toString();
-        } else {
-            return new JSONArray().toString();
-        }
+        return scrapper.getUkraineStats();
     }
 
     @RequestMapping(value = "/countries", method = RequestMethod.GET)
     @ResponseBody
     public String countries() {
-
-        JSONArray array = scrapper.getDocument();
-        if (array != null) {
-            return array.toString();
-        } else {
-            return new JSONArray().toString();
-        }
+        return scrapper.getCountriesStats();
     }
 
 //    @RequestMapping(value = "/update/country/{country}", method = RequestMethod.GET)
@@ -56,7 +44,7 @@ public class RestController {
     @ResponseBody
     public String world() {
 
-        JSONObject array = scrapper.worldStats();
+        JSONObject array = scrapper.getWorldStats();
         if (array != null) {
             return array.toString();
         } else {
@@ -64,15 +52,13 @@ public class RestController {
         }
     }
 
-    @RequestMapping(value = "/")
+    @RequestMapping("/")
     public String welcome() {
-
         return "index";
     }
 
-    @GetMapping(value = "/test")
+    @GetMapping("/test")
     public String test() {
-
         return "template1/index";
     }
 }
