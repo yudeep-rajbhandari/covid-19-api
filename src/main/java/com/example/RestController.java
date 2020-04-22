@@ -1,5 +1,16 @@
 package com.example;
 
+
+import com.example.scrap.ScrapperImpl;
+import org.json.JSONArray;
+import org.json.JSONObject;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+
 import com.example.scrap.NepalCrawler;
 import com.example.scrap.Scrapper;
 import org.json.JSONArray;
@@ -8,27 +19,38 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
-@org.springframework.web.bind.annotation.RestController
+@Controller
 public class RestController {
 
     @Autowired
-    private Scrapper scrapper;
+    private ScrapperImpl scrapper;
 
-    @RequestMapping(value = "/allUpdate", method = RequestMethod.GET)
+    @RequestMapping(value = "/ukraine", method = RequestMethod.GET)
     @ResponseBody
-    public String allcountryUpdate() {
-
-        JSONArray array = scrapper.getdocument();
-        if(array != null){
-            return  array.toString();
-        }
-        else{
-            return new JSONArray().toString();
-        }
+    public String ukraine() {
+        return scrapper.getUkraineStats();
     }
 
-    @RequestMapping(value = "/update/country/{country}", method = RequestMethod.GET)
+    @RequestMapping(value = "/countries", method = RequestMethod.GET)
     @ResponseBody
+
+    public String countries() {
+        return scrapper.getCountriesStats();
+    }
+
+//    @RequestMapping(value = "/update/country/{country}", method = RequestMethod.GET)
+//    @ResponseBody
+//    public String updatebyCountry(@PathVariable("country") final String country) {
+//
+//        JSONObject array = scrapper.getdocumentbyCountry(country);
+//        if (array != null) {
+//            return array.toString();
+//        } else {
+//            return new JSONArray().toString();
+//        }
+//    }
+
+    @RequestMapping(value = "/world", method = RequestMethod.GET)
     @CrossOrigin(origins = "http://localhost:4200")
     public String updatebyCountry(@PathVariable("country") final String country) {
 
@@ -57,17 +79,17 @@ public class RestController {
 
     @RequestMapping(value = "/update/currentTotalcases", method = RequestMethod.GET)
     @ResponseBody
-    public String totalupdate() {
+    public String world() {
 
-        JSONObject array = scrapper.getTotalcases();
-        if(array != null){
-            return  array.toString();
-        }
-        else{
+        JSONObject array = scrapper.getWorldStats();
+        if (array != null) {
+            return array.toString();
+        } else {
             return new JSONArray().toString();
         }
     }
 
+    @RequestMapping("/")
     @RequestMapping(value = "/update/Nepal", method = RequestMethod.GET)
     @ResponseBody
     @CrossOrigin(origins = "http://localhost:4200")
@@ -88,9 +110,8 @@ public class RestController {
         }
     }
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
-    public String welcome() {
-
-     return "Welcome to covid-19-data-centre. \n \nVisit Github repo: https://github.com/yudeep-rajbhandari/covid-19-api";
+    @GetMapping("/test")
+    public String test() {
+        return "template1/index";
     }
 }
