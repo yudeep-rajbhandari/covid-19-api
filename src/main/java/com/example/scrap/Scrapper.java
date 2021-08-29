@@ -83,14 +83,18 @@ public class Scrapper {
             for (Elements li : dataCountry) {
                 int i = 0;
                 for (Element l : li) {
-                    obj.put(header.get(i).toString(), l.text());
+
+                        obj.put(header.get(i).toString().replaceAll(",",""), l.text());
+
                     i = i + 1;
+
                 }
             }
         }
 
         return obj;
     }
+
 
 
     private JSONArray getSAARCJSONObject(List<Elements> list, List header) {
