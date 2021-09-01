@@ -1,6 +1,10 @@
 package com.example.scrap;
 
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+
 import org.apache.commons.lang3.StringUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -136,15 +140,8 @@ public class Scrapper {
         if (list != null) {
             List<Elements> dataCountry = Collections.singletonList(list.stream().reduce((a, b) -> b).orElse(null));;
 
-            for (Elements li : dataCountry) {
-                int i = 0;
-                for (Element l : li) {
-                    obj.put(header.get(i).toString(), l.text());
-                    i = i + 1;
-                }
-            }
-            System.out.println("abcd");
-        }
-        return obj;
-    }
+public interface Scrapper {
+    JSONObject getWorldStats();
+    String getUkraineStats();
+    String getCountriesStats();
 }
