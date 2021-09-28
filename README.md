@@ -18,226 +18,233 @@ For particular country data: https://covid-19-apis.herokuapp.com/update/country/
 
 
 List of countries:
-1	USA
-2	India
-3	Brazil
-4	Russia
-5	UK
-6	France
-7	Turkey
-8	Argentina
-9	Iran
-10	Colombia
-11	Spain
-12	Italy
-13	Indonesia
-14	Germany
-15	Mexico
-16	Poland
-17	South Africa
-18	Ukraine
-19	Peru
-20	Philippines
-21	Netherlands
-22	Iraq
-23	Malaysia
-24	Czechia
-25	Chile
-26	Bangladesh
-27	Canada
-28	Japan
-29	Belgium
-30	Thailand
-31	Pakistan
-32	Sweden
-33	Romania
-34	Israel
-35	Portugal
-36	Morocco
-37	Hungary
-38	Jordan
-39	Kazakhstan
-40	Switzerland
-41	Nepal
-42	Serbia
-43	UAE
-44	Austria
-45	Tunisia
-46	Cuba
-47	Lebanon
-48	Greece
-49	Saudi Arabia
-50	Georgia
-51	Ecuador
-52	Bolivia
-53	Belarus
-54	Guatemala
-55	Paraguay
-56	Panama
-57	Costa Rica
-58	Bulgaria
-59	Vietnam
-60	Sri Lanka
-61	Azerbaijan
-62	Kuwait
-63	Slovakia
-64	Myanmar
-65	Uruguay
-66	Croatia
-67	Dominican Republic
-68	Ireland
-69	Denmark
-70	Palestine
-71	Honduras
-72	Venezuela
-73	Ethiopia
-74	Libya
-75	Oman
-76	Lithuania
-77	Egypt
-78	Bahrain
-79	Moldova
-80	Slovenia
-81	S. Korea
-82	Armenia
-83	Kenya
-84	Qatar
-85	Bosnia and Herzegovina
-86	Mongolia
-87	Zambia
-88	Algeria
-89	Nigeria
-90	Kyrgyzstan
-91	North Macedonia
-92	Norway
-93	Uzbekistan
-94	Botswana
-95	Afghanistan
-96	Mozambique
-97	Albania
-98	Latvia
-99	Estonia
-100	Finland
-101	Namibia
-102	Zimbabwe
-103	Uganda
-104	Ghana
-105	Montenegro
-106	Cyprus
-107	China
-108	El Salvador
-109	Cambodia
-110	Rwanda
-111	Cameroon
-112	Maldives
-113	Luxembourg
-114	Senegal
-115	Singapore
-116	Jamaica
-117	Malawi
-118	Ivory Coast
-119	DRC
-120	Australia
-121	Réunion
-122	Angola
-123	Fiji
-124	Guadeloupe
-125	Trinidad and Tobago
-126	Madagascar
-127	Eswatini
-128	French Polynesia
-129	Sudan
-130	Malta
-131	Cabo Verde
-132	Martinique
-133	French Guiana
-134	Mauritania
-135	Guinea
-136	Suriname
-137	Syria
-138	Gabon
-139	Guyana
-140	Haiti
-141	Togo
-142	Seychelles
-143	Mayotte
-144	Bahamas
-145	Papua New Guinea
-146	Somalia
-147	Tajikistan
-148	Timor-Leste
-149	Belize
-150	Taiwan
-151	Curaçao
-152	Andorra
-153	Mali
-154	Laos
-155	Aruba
-156	Lesotho
-157	Burkina Faso
-158	Congo
-159	Benin
-160	Hong Kong
-161	Burundi
-162	Djibouti
-163	South Sudan
-164	CAR
-165	Nicaragua
-166	Iceland
-167	Channel Islands
-168	Gambia
-169	Equatorial Guinea
-170	Mauritius
-171	Saint Lucia
-172	Yemen
-173	Eritrea
-174	Isle of Man
-175	Sierra Leone
-176	Niger
-177	Guinea-Bissau
-178	Liberia
-179	Gibraltar
-180	San Marino
-181	Chad
-182	Barbados
-183	Comoros
-184	Sint Maarten
-185	New Zealand
-186	Saint Martin
-187	Liechtenstein
-188	Monaco
-189	Bermuda
-190	Turks and Caicos
-191	Bhutan
-192	Sao Tome and Principe
-193	British Virgin Islands
-194	Brunei
-195	St. Vincent Grenadines
-196	Caribbean Netherlands
-197	Antigua and Barbuda
-198	Dominica
-199	St. Barth
-200	Tanzania
-201	Saint Kitts and Nevis
-202	Faeroe Islands
-203	Diamond Princess
-204	Cayman Islands
-205	Wallis and Futuna
-206	Greenland
-207	Grenada
-208	Anguilla
-209	New Caledonia
-210	Falkland Islands
-211	Macao
-212	Saint Pierre Miquelon
-213	Vatican City
-214	Montserrat
-215	Solomon Islands
-216	Western Sahara
-217	MS Zaandam
-218	Vanuatu
-219	Marshall Islands
-220	Samoa
-221	Palau
-222	Saint Helena
-223	Micronesia
+1=North America,
+2=Asia,
+3=South America,
+4=Europe,
+5=Africa,
+6=Oceania,
+7=,
+8=World,
+9=USA,
+10=India,
+11=Brazil,
+12=UK,
+13=Russia,
+14=Turkey,
+15=France,
+16=Iran,
+17=Argentina,
+18=Spain,
+19=Colombia,
+20=Italy,
+21=Germany,
+22=Indonesia,
+23=Mexico,
+24=Poland,
+25=South Africa,
+26=Philippines,
+27=Ukraine,
+28=Malaysia,
+29=Peru,
+30=Netherlands,
+31=Iraq,
+32=Japan,
+33=Czechia,
+34=Chile,
+35=Canada,
+36=Thailand,
+37=Bangladesh,
+38=Israel,
+39=Pakistan,
+40=Belgium,
+41=Romania,
+42=Sweden,
+43=Portugal,
+44=Morocco,
+45=Serbia,
+46=Kazakhstan,
+47=Cuba,
+48=Switzerland,
+49=Hungary,
+50=Jordan,
+51=Nepal,
+52=Vietnam,
+53=Austria,
+54=UAE,
+55=Tunisia,
+56=Greece,
+57=Lebanon,
+58=Georgia,
+59=Guatemala,
+60=Saudi Arabia,
+61=Belarus,
+62=Costa Rica,
+63=Sri Lanka,
+64=Ecuador,
+65=Bolivia,
+66=Bulgaria,
+67=Azerbaijan,
+68=Panama,
+69=Paraguay,
+70=Myanmar,
+71=Kuwait,
+72=Slovakia,
+73=Croatia,
+74=Palestine,
+75=Uruguay,
+76=Ireland,
+77=Venezuela,
+78=Honduras,
+79=Denmark,
+80=Dominican Republic,
+81=Ethiopia,
+82=Libya,
+83=Lithuania,
+84=S. Korea,
+85=Oman,
+86=Egypt,
+87=Mongolia,
+88=Moldova,
+89=Slovenia,
+90=Bahrain,
+91=Armenia,
+92=Kenya,
+93=Qatar,
+94=Bosnia and Herzegovina,
+95=Zambia,
+96=Nigeria,
+97=Algeria,
+98=North Macedonia,
+99=Norway,
+100=Kyrgyzstan,
+101=Botswana,
+102=Uzbekistan,
+103=Albania,
+104=Latvia,
+105=Afghanistan,
+106=Estonia,
+107=Mozambique,
+108=Finland,
+109=Montenegro,
+110=Zimbabwe,
+111=Namibia,
+112=Ghana,
+113=Uganda,
+114=Cyprus,
+115=Cambodia,
+116=El Salvador,
+117=Australia,
+118=Rwanda,
+119=Singapore,
+120=Cameroon,
+121=Maldives,
+122=Jamaica,
+123=Luxembourg,
+124=Senegal,
+125=Malawi,
+126=Ivory Coast,
+127=DRC,
+128=Angola,
+129=Réunion,
+130=Guadeloupe,
+131=Fiji,
+132=Trinidad and Tobago,
+133=Eswatini,
+134=Madagascar,
+135=Martinique,
+136=Suriname,
+137=French Polynesia,
+138=French Guiana,
+139=Sudan,
+140=Cabo Verde,
+141=Malta,
+142=Mauritania,
+143=Syria,
+144=Guyana,
+145=Guinea,
+146=Gabon,
+147=Togo,
+148=Benin,
+149=Laos,
+150=Haiti,
+151=Seychelles,
+152=Bahamas,
+153=Mayotte,
+154=Somalia,
+155=Belize,
+156=Papua New Guinea,
+157=Timor-Leste,
+158=Burundi,
+159=Tajikistan,
+160=Curaçao,
+161=Taiwan,
+162=Aruba,
+163=Mauritius,
+164=Andorra,
+165=Mali,
+166=Lesotho,
+167=Congo,
+168=Burkina Faso,
+169=Nicaragua,
+170=Djibouti,
+171=Hong Kong,
+172=South Sudan,
+173=Equatorial Guinea,
+174=Iceland,
+175=Channel Islands,
+176=CAR,
+177=Saint Lucia,
+178=Gambia,
+179=Yemen,
+180=Barbados,
+181=Isle of Man,
+182=New Caledonia,
+183=Brunei,
+184=Eritrea,
+185=Sierra Leone,
+186=Guinea-Bissau,
+187=Niger,
+188=Liberia,
+189=Gibraltar,
+190=San Marino,
+191=Bermuda,
+192=Chad,
+193=Grenada,
+194=Sint Maarten,
+195=New Zealand,
+196=Comoros,
+197=Saint Martin,
+198=Liechtenstein,
+199=Sao Tome and Principe,
+200=St. Vincent Grenadines,
+201=Monaco,
+202=Dominica,
+203=Antigua and Barbuda,
+204=Turks and Caicos,
+205=British Virgin Islands,
+206=Bhutan,
+207=Caribbean Netherlands,
+208=Saint Kitts and Nevis,
+209=St. Barth,
+210=Tanzania,
+211=Faeroe Islands,
+212=Cayman Islands,
+213=Diamond Princess,
+214=Greenland,
+215=Wallis and Futuna,
+216=Anguilla,
+217=Macao,
+218=Falkland Islands,
+219=Montserrat,
+220=Saint Pierre Miquelon,
+221=Vatican City,
+222=Solomon Islands,
+223=Western Sahara,
+224=MS Zaandam,
+225=Palau,
+226=Vanuatu,
+227=Marshall Islands,
+228=Samoa,
+229=Saint Helena,
+230=Micronesia,
